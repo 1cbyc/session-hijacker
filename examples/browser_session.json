@@ -1,0 +1,19 @@
+{
+  "base_url": "https://httpbin.org",
+  "cookies": [
+    {
+      "name": "session_id",
+      "value": "abc123-live-browser-session",
+      "domain": "httpbin.org",
+      "path": "/",
+      "secure": true,
+      "httpOnly": true
+    }
+  ],
+  "local_storage": {
+    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.example"
+  },
+  "extra_headers": {
+    "X-Client-Source": "browser-devtools-export"
+  }
+}
