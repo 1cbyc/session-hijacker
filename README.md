@@ -1,6 +1,6 @@
 # Session Hijacker
 
-Load cookies and localStorage tokens from a live browser session into **httpx**, verify auth state, and export clean JSON for downstream scraping workers — no browser window required.
+Load cookies and localStorage tokens from a live browser session into **httpx**, verify auth state, and export clean JSON for downstream scraping workers with no browser window required.
 
 ## Quick start
 

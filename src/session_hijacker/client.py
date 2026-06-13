@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 from typing import Any
+from urllib.parse import urlparse
 
 import httpx
 
@@ -40,12 +41,13 @@ class HijackedSession:
         return self._client
 
     def build_cookie_jar(self) -> httpx.Cookies:
+        default_domain = urlparse(self.base_url).hostname or ""
         jar = httpx.Cookies()
         for cookie in self.export.cookies:
             jar.set(
                 cookie.name,
                 cookie.value,
-                domain=cookie.domain,
+                domain=cookie.domain or default_domain,
                 path=cookie.path,
             )
         return jar

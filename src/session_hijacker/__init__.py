@@ -10,6 +10,7 @@ from session_hijacker.models import (
     VerificationResult,
 )
 from session_hijacker.verifier import SessionVerifier
+from session_hijacker.worker import WorkerSession
 
 __all__ = [
     "AuthenticatedSession",
@@ -20,6 +21,7 @@ __all__ = [
     "SessionStatus",
     "SessionVerifier",
     "VerificationResult",
+    "WorkerSession",
 ]
 
 __version__ = "0.1.0"
